@@ -10,12 +10,11 @@
           <wxc-elip line='2'> {{shopDelivery}} </wxc-elip>
         </view>
       </view>
-      <view class='clock'>
+       <view class='clock'>
         <canvas canvas-id="myCanvas" class="canvas"></canvas>
-      </view>
+      </view> 
     </view>
-    <view class="line"></view>
-    <view class='marquee'>
+    <view wx:if='{{shopPrompt.length > 0}}' class='marquee'>
       <view style='width:90%'>
         <view class="desc">
           <text>{{shopPrompt}}</text>
@@ -27,14 +26,6 @@
         </view>
       </view>
     </view>
-
-    <!--<view style='width:100%;display: flex; flex-direction: column; align-items: center; justify-content: center;background-color: #fff7cc;'>
-      <view style='width:90%;'>
-        <template is="zan-noticebar" data="{{ ...movable, componentId: 'movable'  }}"></template>
-      </view>
-    </view>-->
-
-
   </view>
 
   <wxc-dialog class="onLoad-err" title="提示" content="加载商品数据失败！" confirm-text="重试" cancel-text="返回" bindconfirm="onConfirm" bindcancel="onCancel"></wxc-dialog>
